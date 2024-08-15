@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <from method="POST">{% csrf_token %}
+        <label for="id1" >enter</label>
+        <input name="" id="id1" placeholder="num" required>
+        <button>submit</button>
+    </from>
+    <table>
+        <thead>
+            <tr>
+                <td>Title</td>
+                <td>Date</td>
+                <td>Decs</td>
+            </tr>
+            {% if obj %}
+                {{ Notes.Title }}
+            {% endif %}
+        </thead>
+    </table>
+</body>
+</html>
